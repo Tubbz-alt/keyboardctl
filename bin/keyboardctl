@@ -20,8 +20,7 @@ if [ ! -e "$KBCONFIG" ]; then
 	echo "error: default configuration file '$KBCONFIG' does not exist! Abording..." 1>&2
 	exit 1
 elif [ ! -d "$CACHEDIR" ]; then
-	echo "error: cache directory '$CACHEDIR' does not exist! Abording..." 1>&2
-	exit 1
+	mkdir -p "$CACHEDIR"
 fi
 
 # Include default config
