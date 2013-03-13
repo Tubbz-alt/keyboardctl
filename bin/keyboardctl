@@ -165,9 +165,9 @@ print_help()
 {
 	echo "keyboardctl [OPTION] [...]"
 	echo ""
-	echo "   --help                 show help"
-	echo "   --setup                load console keyboard layout and set X11 layout"
-	echo "   --set-layout [Optional:MODEL] [LAYOUT] [Optional:VARIANT]   set keyboard layout"
+	echo " -h --help              show help"
+	echo " -s --setup             load console keyboard layout and set X11 layout"
+	echo " -l --set-layout [Optional:MODEL] [LAYOUT] [Optional:VARIANT]   set keyboard layout"
 	echo ""
 }
 
@@ -186,12 +186,12 @@ do
 			print_help
 			exit 0
 			;;
-		--setup)
+		-s|--setup)
 			check_root
 			load_layout
 			exit 0
 			;;
-		--set-layout)
+		-l|--set-layout)
 			ARGS=$[$PARAM - $I]
 			check_root
 
