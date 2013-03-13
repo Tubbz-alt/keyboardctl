@@ -161,7 +161,7 @@ print_help()
 	echo ""
 	echo "   --help                 show help"
 	echo "   --setup                load console keyboard layout and set X11 layout"
-	echo "   --set-layout [Optional:MODEL] [LAYOUT] [VARIANT]   set keyboard layout"
+	echo "   --set-layout [Optional:MODEL] [LAYOUT] [Optional:VARIANT]   set keyboard layout"
 	echo ""
 }
 
@@ -197,6 +197,10 @@ do
 				XKBMODEL="pc105"
 				XKBLAYOUT="$2"
 				XKBVARIANT="$3"
+			elif [ $ARGS -eq 1 ]; then
+				XKBMODEL="pc105"
+				XKBLAYOUT="$2"
+				XKBVARIANT=""
 			else
 				echo "error: no or invalid arguments passed!" 1>&2
 				exit 1
