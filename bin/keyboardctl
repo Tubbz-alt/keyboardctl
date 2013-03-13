@@ -167,7 +167,7 @@ print_help()
 	echo ""
 	echo " -h --help              show help"
 	echo " -s --setup             load console keyboard layout and set X11 layout"
-	echo " -l --set-layout [Optional:MODEL] [LAYOUT] [Optional:VARIANT]   set keyboard layout"
+	echo " -l --set-layout [Opt.:MODEL] [LAYOUT] [Opt.:VARIANT] set keyboard layout"
 	echo ""
 }
 
