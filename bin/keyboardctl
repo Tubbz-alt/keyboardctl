@@ -163,7 +163,7 @@ load_layout()
 
 print_help()
 {
-	echo "keyboardctl [OPTION] [...]"
+	echo "$0 [OPTION] [...]"
 	echo ""
 	echo " -h --help              show help"
 	echo " -s --setup             load console keyboard layout and set X11 layout"
