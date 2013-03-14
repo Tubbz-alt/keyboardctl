@@ -151,11 +151,13 @@ load_layout()
 		echo "error: loadkeys failed!" 1>&2
 		exit 1
 	fi
-	# Set xkb
-	setxkbmap -model "$XKBMODEL" -layout "$XKBLAYOUT" -variant "$XKBVARIANT" >/dev/null
-	if [ $? -ne 0 ]; then
-		echo "error: setxkbmap failed!" 1>&2
-		exit 1
+	RES=`ps ax | grep -v grep | grep -i xorg`
+ 	if [ $? -eq 0 ]; then
+ 		setxkbmap -model "$XKBMODEL" -layout "$XKBLAYOUT" -variant "$XKBVARIANT" >/dev/null
+		if [ $? -ne 0 ]; then
+			echo "error: setxkbmap failed!" 1>&2
+			exit 1
+		fi
 	fi
 }
 
