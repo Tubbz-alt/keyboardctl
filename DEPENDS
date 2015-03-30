@@ -1,3 +1,4 @@
 keyboardctl depends on:
     kbd
     xkeyboard-config
+    ckbcomp
